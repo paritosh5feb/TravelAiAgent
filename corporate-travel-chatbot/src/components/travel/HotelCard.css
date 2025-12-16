@@ -1,0 +1,343 @@
+.hotel-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.hotel-card.compliant {
+  border-left: 3px solid var(--success-500);
+}
+
+.hotel-card.non-compliant {
+  border-left: 3px solid var(--error-500);
+}
+
+/* Header */
+.hotel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.hotel-info {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.hotel-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: var(--radius-md);
+  color: var(--primary-600);
+  border: 1px solid var(--gray-200);
+  flex-shrink: 0;
+}
+
+.hotel-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.hotel-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gray-900);
+}
+
+.hotel-location {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.813rem;
+  color: var(--gray-500);
+}
+
+.policy-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.policy-badge.compliant {
+  background: var(--success-50);
+  color: var(--success-600);
+}
+
+.policy-badge.non-compliant {
+  background: var(--error-50);
+  color: var(--error-600);
+}
+
+/* Rating */
+.hotel-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.rating-value {
+  font-weight: 600;
+  color: var(--gray-900);
+  font-size: 0.938rem;
+}
+
+.rating-text {
+  font-size: 0.813rem;
+  color: var(--gray-500);
+}
+
+/* Address */
+.hotel-address {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.813rem;
+  color: var(--gray-600);
+}
+
+/* Amenities */
+.hotel-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.amenity-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  color: var(--gray-600);
+}
+
+.amenity-badge.more {
+  background: var(--gray-100);
+  color: var(--gray-500);
+}
+
+/* Distance Info */
+.distance-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--primary-50);
+  border-radius: var(--radius-md);
+}
+
+.distance-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--primary-700);
+}
+
+.distance-item svg {
+  flex-shrink: 0;
+}
+
+.distance-item div {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+}
+
+.distance-item .label {
+  color: var(--primary-600);
+}
+
+.distance-item .value {
+  font-weight: 600;
+  color: var(--primary-800);
+}
+
+/* Policy Note */
+.policy-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: var(--error-50);
+  border-radius: var(--radius-md);
+  font-size: 0.813rem;
+  color: var(--error-700);
+}
+
+.policy-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Expand Button */
+.expand-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  color: var(--gray-500);
+  font-size: 0.813rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.expand-btn:hover {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+
+/* Expanded Details */
+.hotel-details-expanded {
+  padding: var(--spacing-md);
+  background: white;
+  border-radius: var(--radius-md);
+  animation: slideDown 0.2s ease;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.detail-grid .detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-grid .label {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.detail-grid .value {
+  font-size: 0.875rem;
+  color: var(--gray-900);
+  font-weight: 500;
+}
+
+/* Footer */
+.hotel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--gray-200);
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.price-per-night {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.price-per-night .amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.price-per-night .period {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
+.total-price {
+  font-size: 0.813rem;
+  color: var(--gray-500);
+}
+
+.total-price strong {
+  color: var(--gray-700);
+}
+
+.hotel-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.action-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.action-btn.primary {
+  background: var(--company-color, var(--primary-600));
+  color: white;
+}
+
+.action-btn.primary:hover {
+  filter: brightness(1.1);
+}
+
+.action-btn.secondary {
+  background: white;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+}
+
+.action-btn.secondary:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+@media (max-width: 480px) {
+  .hotel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .distance-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .hotel-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hotel-actions {
+    width: 100%;
+  }
+  
+  .action-btn {
+    flex: 1;
+    text-align: center;
+  }
+}
