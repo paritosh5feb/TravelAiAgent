@@ -1,0 +1,159 @@
+.policy-info-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.policy-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--gray-900);
+}
+
+.policy-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.policy-header svg {
+  color: var(--company-color, var(--primary-600));
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 480px) {
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.policy-item {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-100);
+}
+
+.policy-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.policy-icon.flight {
+  background: var(--primary-50);
+  color: var(--primary-600);
+}
+
+.policy-icon.hotel {
+  background: var(--success-50);
+  color: var(--success-600);
+}
+
+.policy-icon.class {
+  background: var(--warning-50);
+  color: var(--warning-600);
+}
+
+.policy-icon.time {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.policy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.policy-label {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.policy-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.policy-note {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.policy-footer {
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--gray-200);
+}
+
+.approval-status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.approval-status.required {
+  background: var(--warning-50);
+  color: var(--warning-700);
+}
+
+.approval-status.not-required {
+  background: var(--success-50);
+  color: var(--success-700);
+}
+
+.policy-tips {
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary-50), #f0fdf4);
+  border-radius: var(--radius-md);
+}
+
+.policy-tips h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-sm);
+}
+
+.policy-tips ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.policy-tips li {
+  font-size: 0.813rem;
+  color: var(--gray-600);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.policy-tips li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-500);
+}
